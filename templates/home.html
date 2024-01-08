@@ -2,56 +2,40 @@
 <html>
   <head>
     <title>Cyrus Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      h1{
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: Normal;
-        color: rgb(100,100,100);
-        text-align: center;
-        
-      }
       #banner{
-        width: 100%;
-        height: 360px; 
+        height: 360px;
+        width:100%;
         object-fit: cover;
         
-      }
-      h2{
-        font-family: Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        font-weight: Normal;
-        text-align: center;
-      }
-      .bodytext{
-        font: family Roboto;
-        color: rgb(80, 80, 80);
-        
-      }
-      #container{
-        max-width:720px;
-        margin:0 auto 0 auto;
       }
     </style>
     
   </head>
   <body>
-    <div id='container'>
-      <h1>Cyrus Careers</h1>
-      <img id='banner' src='https://98b92a0e-8d42-45de-bf1a-ae827d40de36-00-38aprd87qfcn0.riker.replit.dev/static/banner1.jpg'  >
-      <h2>About Cyrus</h2>
-      <p class="bodytext">
+    <div class="container">
+      <h1 class= "text-center mt-2 mb-4">{{company_name}} Careers</h1>
+      <img class = "img-fluid" id='banner' src='https://98b92a0e-8d42-45de-bf1a-ae827d40de36-00-38aprd87qfcn0.riker.replit.dev/static/banner1.jpg'  >
+      <h2 class="text-center mt-2 mb-2">About {{company_name}}</h2>
+      <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Aliquam etiam erat velit scelerisque in dictum non consectetur. Dui faucibus in ornare quam. Nibh praesent tristique magna sit amet purus. Eget mauris pharetra et ultrices. Facilisis volutpat est velit egestas dui id ornare. Gravida quis blandit turpis cursus. Et malesuada fames ac turpis egestas maecenas.
       </p>
-      <h2>Open positions</h2>
+      <h2 class = "text-center mt-2 mb-2">Open positions</h2>
       
-      <p class="bodytext"> TO-DO show the jobs here</p>
+      <p>{% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+      </p>
       <div style = "text-align: center;">
-      <button> Contact Us</button>
-        <p>Copyright 2022, Cyrus</p>
+      <button class = "btn btn-primary btn-lg"> Contact Us</button>
+        <p class="mt-4">Copyright 2022, Cyrus</p>
       </div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+      
+    </script>
   </body>
 </html> 

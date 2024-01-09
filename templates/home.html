@@ -10,19 +10,31 @@
         height: 360px;
         width:100%;
         object-fit: cover;
+        margin-bottom:16px;
         
       }
     </style>
     
   </head>
   <body>
+    {% include 'nav.html' %}
+    
+
+     
+     <img class = "img-fluid" id='banner' src='https://98b92a0e-8d42-45de-bf1a-ae827d40de36-00-38aprd87qfcn0.riker.replit.dev/static/banner1.jpg'  >
+    
     <div class="container">
       <h1 class= "text-center mt-2 mb-4">{{company_name}} Careers</h1>
-      <img class = "img-fluid" id='banner' src='https://98b92a0e-8d42-45de-bf1a-ae827d40de36-00-38aprd87qfcn0.riker.replit.dev/static/banner1.jpg'  >
-      <h2 class="text-center mt-2 mb-2">About {{company_name}}</h2>
+      <div class="row" style= "border-bottom: 16px">
+      <div class=" col-md-6">
       <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a lacus vestibulum. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Aliquam etiam erat velit scelerisque in dictum non consectetur. Dui faucibus in ornare quam. Nibh praesent tristique magna sit amet purus. Eget mauris pharetra et ultrices. Facilisis volutpat est velit egestas dui id ornare. Gravida quis blandit turpis cursus. Et malesuada fames ac turpis egestas maecenas.
       </p>
+      </div>
+        <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height: 320px; border-radius:4px;">
+        </div>
+      </div>
       <h2 class = "text-center mt-2 mb-2">Open Positions</h2>
       
       <p>{% for job in jobs %}
@@ -30,12 +42,12 @@
         {% endfor %}
       </p>
       <div style = "text-align: center;">
-      <button class = "btn btn-primary btn-lg"> Contact Us</button>
-        <p class="mt-4">Copyright 2022, Cyrus</p>
+      <a class = "btn btn-primary btn-lg" href="mailto:cyrusn916@gmail.com?subject=question%20about%20job%20openings&body=my%20name%3A%3Cname%3E%0D%0Amy%20question%3A%3Center%20question%3E"> Contact Us</a>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
       
     </script>
+  {% include 'footer.html' %}
   </body>
 </html> 

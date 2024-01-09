@@ -12,7 +12,7 @@ JOBS=[
   'id': '2',
   'title':'saxophonist',
   'location': 'Kimbu, Kenya',
-  'salary': 'ksh 17000'
+  'salary': 'ksh 19000'
 },
 {
   'id': '3',

@@ -12,3 +12,7 @@ language = "python3"
 [deployment]
 run = ["sh", "-c", "python app.py"]
 deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

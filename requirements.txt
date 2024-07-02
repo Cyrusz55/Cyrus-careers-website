@@ -2,3 +2,7 @@ Flask
 gunicorn
 sqlalchemy
 pymysql
+markupsafe
+mysqlx
+mysql-connector-python
+greenlet
